@@ -1,0 +1,68 @@
+<h1>${model.slName}管理</h1>
+
+
+
+<form name="${model.slName}_form" class="navbar-form navbar-right form-group-sm" role="search">
+  <div class="form-group">
+    <a href="/${model.name}?clear_params=1">清空搜索</a>
+
+    <div class="input-group">
+      <input class="form-control" id="rq_b" name="rq_b" value="<%=session[:rq_b]%>" size=10 type="text" readonly="true" data-provide='datepicker' data-date-format="yyyy-mm-dd" ,  placeholder="开始"  />
+      <div id='clear_rq_b' class="input-group-addon">X</div>
+    </div> 
+    -
+    <div class="input-group">
+      <input class="form-control" id="rq_e" name="rq_e" value="<%=session[:rq_e]%>" size=10  type="text" readonly="true" data-provide='datepicker' data-date-format="yyyy-mm-dd" ,  placeholder="结束" />
+      <div id='clear_rq_e' class="input-group-addon">X</div>
+    </div>
+  
+#foreach($key in $model.allColumn) #if($key.fieldName!='vcId'&&$key.fieldName!='id'&&$key.queryCol==true)
+    <%= text_field_tag '${key.name}_sc', @${key.name}_sc,  placeholder: '${key.comment}', class: "form-control" %>
+#end #end
+
+  </div>
+  <button type="submit" class="btn btn-primary btn-sm" onclick="document.${model.slName}_form.action='/${model.name}';document.${model.slName}_form.submit();">搜索</button>   
+  <button type="submit" class="btn btn-primary btn-sm" onclick="document.${model.slName}_form.action='/${model.name}.xls';document.${model.slName}_form.submit();">导出</button>  
+</form>
+
+<table class="table table-striped">
+  <thead>
+    <tr>
+#foreach($key in $model.columnList)
+       <td> #if(${key.comment}&&${key.comment}!='')${key.comment}#end</td>
+#end
+      <th colspan="3"><%= link_to '新增', new_${model.tableDsName}_path %></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @${model.name}.each do |${model.slName}| %>
+      <tr>
+#foreach($key in $model.columnList)
+       <td><%= ${model.slName}.$key.name %></td>
+#end
+        <td><a href="/${model.name}/showall/<%=${model.slName}.id%>">查看样式2</a> | <%= link_to '查看样式1', ${model.slName} %> | <%= link_to '修改', edit_${model.tableDsName}_path(${model.slName}) %> | <%= link_to '删除', ${model.slName}, method: :delete, data: { confirm: '确定要删除吗?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+<%= will_paginate @products, renderer: BootstrapPagination::Rails %>
+<label class="btn btn-success navbar-right">总条数：<%= @${model.name}.total_entries%></label>
+<br />
+
+
+
+
+<!-- 添加清空日期条件事件 -->
+<script type="text/javascript">
+  jQuery(function($) {
+    $('#clear_rq_b').click(function (){
+        $("#rq_b").val("");
+    });
+    $('#clear_rq_e').click(function (){
+        $("#rq_e").val("");
+    });
+  })
+</script>

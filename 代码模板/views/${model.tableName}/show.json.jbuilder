@@ -1,0 +1,1 @@
+json.partial! "atests/atest", atest: @atest

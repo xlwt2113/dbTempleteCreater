@@ -1,0 +1,33 @@
+<h1>信息详情-样式2</h1>
+
+
+
+
+<head><meta charset="UTF-8"></head>
+<p class="hidden-print" id="notice"></p>
+<div class = "row col-xs-7">
+   <table class="table  table-bordered  ">
+      <caption class="hidden-print"> <span class="navbar-right"><a href="/${model.name}/showall/<%=@${model.slName}.id%>.pdf" target="_blank"><button class="btn btn-primary">导出打印</button></a>&nbsp;或&nbsp;<a href="javascript:window.close();">关闭</a></span></caption>
+      <thead>
+         <tr> 
+            <th colspan="8"><div class="col-xs-8 text-center"><h2>数据表名称</h2></div><span class="col-xs-2"><small><br><br><%=DateTime.parse(Time.now.to_s).strftime('%Y-%m-%d').to_s%></small></span></th>
+         </tr>
+      </thead>
+      
+      <tbody>
+#foreach($key in $model.allColumn) #if($key.fieldName!='vcId'&&$key.fieldName!='id')
+         <tr>
+            <td class="active">${key.comment}</td>
+            <td colspan="3"><%= @${model.slName}.${key.name}%></td>
+            <td colspan="2" class="active"></td>
+            <td colspan="2"></td>
+         </tr>
+#end #end
+
+      </tbody>
+   </table>
+
+<div class="form-group">
+	<label ></label>
+	<%= link_to '返回', ${model.name}_path %>
+</div>

@@ -1,0 +1,30 @@
+<?xml version="1.0"?>
+<ss:Workbook xmlns:ss="urn:schemas-microsoft-com:office:spreadsheet">
+    <ss:Worksheet ss:Name="Sheet1">
+        <ss:Table>
+
+
+            <ss:Column ss:Width="80"/>
+            <ss:Column ss:Width="80"/>
+            <ss:Column ss:Width="80"/>
+            <ss:Row>
+            #foreach($key in $model.columnList)
+                <ss:Cell>
+                    <ss:Data ss:Type="String"> #if(${key.comment}&&${key.comment}!='')${key.comment}#end</ss:Data>
+                 </ss:Cell>
+            #end
+                 
+            </ss:Row>
+            <% @query.each do |${model.slName}| %>
+            <ss:Row>
+                #foreach($key in $model.columnList)  
+                <ss:Cell>
+                  <ss:Data ss:Type="String"><%=${model.slName}.${key.name} %></ss:Data>
+                </ss:Cell>
+                #end
+                  
+            </ss:Row>
+            <% end %>
+        </ss:Table>
+    </ss:Worksheet>
+</ss:Workbook>

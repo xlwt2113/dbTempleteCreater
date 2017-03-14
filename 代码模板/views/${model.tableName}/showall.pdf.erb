@@ -1,0 +1,81 @@
+<head>
+   <meta charset="UTF-8">
+</head>
+
+<!-- <%= wicked_pdf_stylesheet_link_tag "pdf" -%> -->
+<style type="text/css">
+   div.alwaysbreak { page-break-before: always; }
+   div.nobreak:before { clear:both; }
+   div.nobreak { page-break-inside: avoid; }
+   .z_table {
+      font-size: 12px;
+      width: 100%;
+      border-collapse:collapse;
+      border: 1px solid #000000;
+   }
+   .z_table th{
+      height:80px;
+   }
+   .z_active {
+      background-color: #DDDDDD;
+   }
+   .z_table tr,
+
+   .z_table td { 
+      height:19px;
+      border: 1px solid #000000;
+   }
+   .z_col-xs{
+      float: left;
+      width: 25%;
+   }
+   .z_col-xs-center{
+      float: left;
+      width: 50%;
+   }
+   .z_text-right{
+      text-align: right;
+   }
+   .z_col-xs-10{
+      float: left;
+      width: 12%;
+
+   }
+
+   .z_hight_tr td{
+      height:35px;
+   }
+   .erweima{
+      border-right:1px solid #000000;
+   }
+   #code{
+      margin-left:100px;
+      margin-top:-40px;
+   }
+</style>
+
+<div class = "row col-xs">
+   <table class="z_table">
+      <tbody>
+         <tr class="zhead"> 
+            <th colspan="8">
+               <div class="z_col-xs-center text-center"><h1>单据信息</h1></div>
+               <div class="z_col-xs-10"><span class=""><small><br><br><%=DateTime.parse(Time.now.to_s).strftime('%Y-%m-%d').to_s%></small></span><div>
+               <div id='code' class="z_col-xs-10"></div>
+            </th>
+               
+         </tr>
+      
+      #foreach($key in $model.allColumn) #if($key.fieldName!='vcId'&&$key.fieldName!='id')
+         <tr>
+            <td class="z_active">${key.comment}</td>
+            <td colspan="3"><%= @${model.slName}.${key.name}%></td>
+            <td colspan="2" class="z_active"></td>
+            <td colspan="2"></td>
+         </tr>
+      #end #end
+      </tbody>
+   </table>
+   <br>
+
+</div>

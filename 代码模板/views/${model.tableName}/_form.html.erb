@@ -1,0 +1,36 @@
+<%= form_for(@${model.slName},:html => {:class=>"form-horizontal"}) do |f| %>
+    <% if @${model.slName}.errors.any? %>
+        <div id="error_explanation">
+          <h2>保存数据时产生 <%=@${model.slName}.errors.count%>个错误,请检查:</h2>
+          <ul>
+            <% @${model.slName}.errors.messages.each do |message| %>
+                <li><%= message[1][0] %></li>
+            <% end %>
+          </ul>
+        </div>
+    <% end %>
+
+
+
+#foreach($key in $model.allColumn) #if($key.fieldName!='vcId'&&$key.fieldName!='id')
+  <div class="form-group form-group-lg">
+    <label class="col-sm-1 control-label">${key.comment}#if($key.isNull!=true)<font color="red">*</font>#end</label>
+    <div class="row col-xs-4">
+    <%= f.text_field :${key.name} ,:class=>"form-control no_space"%>
+    </div>
+  </div>
+
+#end #end
+
+
+
+  <div class="form-group">
+    <label class="col-sm-1 control-label"></label>
+    <div class="row col-xs-4">
+    <input type='submit' class="btn btn-primary btn-lg" data-loading-text="处理中..." value="保存提交"/> 或
+    <%= link_to '返回', ${model.name}_path %>
+    </div>
+ </div>
+
+
+<% end %>

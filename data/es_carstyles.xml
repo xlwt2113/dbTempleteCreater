@@ -6,7 +6,7 @@
       <value type="java.lang.String">esCarstyle</value>
     </property>
     <property name="targetPath">
-      <value type="java.lang.String">/home/wangtao/eclipseWorkSpace/src</value>
+      <value type="java.lang.String">/home/wangtao/eclipseWorkSpace/jar/src</value>
     </property>
     <property name="url">
       <value type="java.lang.String">esCarstyles</value>
@@ -102,7 +102,7 @@
             <value type="java.lang.Boolean">false</value>
           </property>
           <property name="queryCol">
-            <value type="java.lang.Boolean">false</value>
+            <value type="java.lang.Boolean">true</value>
           </property>
           <property name="queryType">
             <value type="java.lang.String"></value>
@@ -143,7 +143,7 @@
             <value type="java.lang.Boolean">false</value>
           </property>
           <property name="queryCol">
-            <value type="java.lang.Boolean">false</value>
+            <value type="java.lang.Boolean">true</value>
           </property>
           <property name="queryType">
             <value type="java.lang.String"></value>
@@ -184,7 +184,7 @@
             <value type="java.lang.Boolean">false</value>
           </property>
           <property name="queryCol">
-            <value type="java.lang.Boolean">false</value>
+            <value type="java.lang.Boolean">true</value>
           </property>
           <property name="queryType">
             <value type="java.lang.String"></value>
@@ -257,7 +257,7 @@
             <value type="java.lang.String">年款</value>
           </property>
           <property name="isNull">
-            <value type="java.lang.Boolean">true</value>
+            <value type="java.lang.Boolean">false</value>
           </property>
           <property name="isPri">
             <value type="java.lang.Boolean">false</value>
@@ -298,7 +298,7 @@
             <value type="java.lang.String">排量</value>
           </property>
           <property name="isNull">
-            <value type="java.lang.Boolean">true</value>
+            <value type="java.lang.Boolean">false</value>
           </property>
           <property name="isPri">
             <value type="java.lang.Boolean">false</value>
@@ -339,7 +339,7 @@
             <value type="java.lang.String">厂商</value>
           </property>
           <property name="isNull">
-            <value type="java.lang.Boolean">true</value>
+            <value type="java.lang.Boolean">false</value>
           </property>
           <property name="isPri">
             <value type="java.lang.Boolean">false</value>
@@ -380,7 +380,7 @@
             <value type="java.lang.String">级别</value>
           </property>
           <property name="isNull">
-            <value type="java.lang.Boolean">true</value>
+            <value type="java.lang.Boolean">false</value>
           </property>
           <property name="isPri">
             <value type="java.lang.Boolean">false</value>
@@ -421,7 +421,7 @@
             <value type="java.lang.String">发动机</value>
           </property>
           <property name="isNull">
-            <value type="java.lang.Boolean">true</value>
+            <value type="java.lang.Boolean">false</value>
           </property>
           <property name="isPri">
             <value type="java.lang.Boolean">false</value>
@@ -462,7 +462,7 @@
             <value type="java.lang.String">变速箱</value>
           </property>
           <property name="isNull">
-            <value type="java.lang.Boolean">true</value>
+            <value type="java.lang.Boolean">false</value>
           </property>
           <property name="isPri">
             <value type="java.lang.Boolean">false</value>
@@ -503,7 +503,7 @@
             <value type="java.lang.String">环保标准</value>
           </property>
           <property name="isNull">
-            <value type="java.lang.Boolean">true</value>
+            <value type="java.lang.Boolean">false</value>
           </property>
           <property name="isPri">
             <value type="java.lang.Boolean">false</value>
@@ -544,7 +544,7 @@
             <value type="java.lang.String">车身结构</value>
           </property>
           <property name="isNull">
-            <value type="java.lang.Boolean">true</value>
+            <value type="java.lang.Boolean">false</value>
           </property>
           <property name="isPri">
             <value type="java.lang.Boolean">false</value>

@@ -1,0 +1,21 @@
+<h1>信息详情</h1>
+
+<%= form_for(@${model.slName}, :html => {:class=>"form-group col-md-6"}) do |f| %>
+
+
+#foreach($key in $model.columnList)
+<div class="form-group form-group-lg">
+	<label > #if(${key.comment}&&${key.comment}!='')${key.comment}#end</label></label><span id="check_name" style="color:red; "></span>
+	<%= f.text_field :$key.name ,:class=>"form-control",:disabled=>"disable"%>
+</div>
+#end
+
+<div class="form-group">
+	<label ></label>
+	<%= link_to '返回', ${model.name}_path %>
+</div>
+
+<%end%>
+
+
+
