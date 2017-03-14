@@ -2,8 +2,7 @@
 
 <config> 
   <TNSs> 
-    <TNS name="oracle10g" ip="127.0.0.1" port="1521" driver="D:\Tomcat\Tomcat6-gt\lib\classes12.jar" sud="csmisdb" dbtype="oracle[8i,9i,10g]" username="sczhcs" password="csmis" sid="orcl" jdbcUrl="jdbc:oracle:thin:@127.0.0.1:1521:orcl"/>  
-    <TNS name="mysql" ip="127.0.0.1" port="3306" driver="F:\tmp\mysql-connector-java-5.1.9.jar" sid="dbblog" dbtype="mysql" username="root" password="root"/>  
+    <TNS name="mysql" ip="127.0.0.1" port="3306" driver="mysql-connector-java-5.0.6-bin.jar" sid="depot" dbtype="mysql" username="root" password="root" jdbcUrl="jdbc:mysql://127.0.0.1:3306/depot?useServerPrepStmts=false&amp;useUnicode=true&amp;characterEncoding=GBK&amp;autoReconnect=true"/>  
     <TNS name="183" ip="192.168.0.183" port="3306" driver="E:\workspace\csmis\webroot\WEB-INF\lib\mysql-connector-java-5.0.5.jar" sid="hnfxj" dbtype="mysql" username="root" password="root"/>  
     <TNS name="208" ip="125.46.36.208" port="3306" driver="E:\workspace\csmis\webroot\WEB-INF\lib\mysql-connector-java-5.0.5.jar" sid="hnfxj" dbtype="mysql" username="root" password="hnfxjwebuser"/>  
     <TNS name="174" ip="172.16.18.174" port="1521" driver="D:\oracle\product\10.2.0\db_1\jdbc\lib\ojdbc14.jar" sid="csmisdb" dbtype="oracle[8i,9i,10g]" username="csmisztx" password="csmis"/>  
