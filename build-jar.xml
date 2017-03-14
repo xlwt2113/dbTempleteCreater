@@ -1,0 +1,55 @@
+<?xml version="1.0" ?>
+<project name="hibernate" default="build-jar">
+    <property name="app.target" location="C:/jdbcfront"/><!--应用程序名称 -->
+    <property name="app.name" value="jdbcfront"/><!--应用程序名称 -->
+    <property name="app.path" location="./"/><!--源程序路径 -->
+    <property name="app.src" location="${app.path}/core"/><!--源程序路径 -->
+    <property name="app.resource" location="${app.path}/resource"/><!--资源及配置文件路径 -->
+    <property name="app.lib" location="${app.path}/lib"/><!--依赖库路径 -->
+    <property name="app.conf" location="${app.path}/conf"/><!--依赖库路径 -->
+    <property name="maxMem.size" value="600m"/><!--内存最大值 -->
+    <property name="java.home" value="D:\Java\jdk1.5.0_11" /><!--JDK的路径-->
+
+	<target name="banner">
+	<echo message="=====${app.name}构建开始=====" />
+	</target>
+    <target name="do-java-compile" depends="banner">
+        <echo>把项目中的java文件编译成classes文件</echo>
+
+		<mkdir dir="${app.path}/corebin/" /> 
+		<copy todir="${app.path}/corebin/" >	
+		  	<fileset dir="${app.path}/core" excludes="*.java"/>
+		</copy>	
+        <javac  destdir="${app.path}/corebin/"
+                optimize="off"
+        		source="1.5"
+                debug="on"
+                failonerror="true"
+                srcdir="${app.src}"
+			    encoding="GBK"
+	        	deprecation="false"
+	            memoryInitialSize="80m"
+	            memoryMaximumSize="${maxMem.size}"
+	            fork="yes"
+        >
+            <classpath>
+	            <fileset dir="${java.home}/lib/">
+                    <include name="*.jar"/>
+                </fileset>
+                <fileset dir="${app.lib}">
+                    <include name="*.jar"/>
+                </fileset>
+            </classpath>
+        </javac>
+    </target>
+
+	<target name="build-jar" depends="do-java-compile">
+
+        <echo>把编译后的类打成jar包</echo>
+		<jar jarfile="${app.path}/../jdbcFrontPlug/lib/${app.name}.jar" 
+			 basedir="${app.path}/corebin">
+			<include name="**/*"/>
+		</jar>
+	</target>
+	
+</project>

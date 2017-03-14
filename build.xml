@@ -1,0 +1,111 @@
+<?xml version="1.0" ?>
+<project name="hibernate" default="package">
+    <property name="app.target" location="D:/Java/jdbcfront"/><!--应用程序名称 -->
+    <property name="app.name" value="jdbcfront"/><!--应用程序名称 -->
+    <property name="app.path" location="./"/><!--源程序路径 -->
+    <property name="app.src" location="${app.path}/src"/><!--源程序路径 -->
+    <property name="app.resource" location="${app.path}/resource"/><!--资源及配置文件路径 -->
+    <property name="app.lib" location="${app.path}/lib"/><!--依赖库路径 -->
+    <property name="app.conf" location="${app.path}/conf"/><!--依赖库路径 -->
+    <property name="maxMem.size" value="600m"/><!--内存最大值 -->
+    <property name="java.home" value="D:\Java\jdk1.5.0_11" /><!--JDK的路径-->
+
+	<target name="banner">
+	<echo message="=====${app.name}构建开始=====" />
+	</target>
+	<target name="clear" depends="banner">
+		<copy todir="${app.path}" >	
+		  	<fileset dir="${app.target}/conf">
+		  		<include name="config.ini"></include>
+		  		<include name="dbnames.xml"></include>
+		  	</fileset>
+		</copy>	
+	    <delete dir="${app.target}"/> 
+		<mkdir dir="${app.target}" /> 
+	</target>
+	<target name="create-dir" depends="clear">
+		<mkdir dir="${app.target}/bin" /> 
+		<mkdir dir="${app.target}/conf" /> 
+		<mkdir dir="${app.target}/log" /> 
+		<mkdir dir="${app.target}/lib" /> 
+	</target>
+	<target name="copy-file" depends="create-dir">
+		<copy todir="${app.target}/lib" >	
+		  	<fileset dir="${app.lib}" includes="*.jar"/>
+		</copy>	
+		<copy todir="${app.target}/conf" >	
+		  	<fileset dir="${app.conf}" includes="*.*"/>
+		</copy>	
+		<copy todir="${app.target}/bin" >	
+		  	<fileset dir="${app.path}/bat" includes="*.*"/>
+		</copy>	
+		<copy todir="${app.target}/conf" overwrite="true">	
+		  	<fileset dir="${app.path}">
+		  		<include name="config.ini"></include>
+		  		<include name="dbnames.xml"></include>
+		  	</fileset>
+		</copy>	
+	    <delete file="${app.path}/config.ini"/> 
+	    <delete file="${app.path}/dbnames.xml"/> 
+	</target>
+    <target name="do-java-compile" depends="copy-file">
+        <echo>把项目中的java文件编译成classes文件</echo>
+        <javac  destdir="${app.path}/bin/"
+                optimize="off"
+        		source="1.5"
+                debug="on"
+                failonerror="true"
+                srcdir="${app.src}"
+			    encoding="GBK"
+	        	deprecation="false"
+	            memoryInitialSize="80m"
+	            memoryMaximumSize="${maxMem.size}"
+	            fork="yes"
+        >
+            <classpath>
+	            <fileset dir="${java.home}/lib/">
+                    <include name="*.jar"/>
+                </fileset>
+                <fileset dir="${app.lib}">
+                    <include name="*.jar"/>
+                </fileset>
+            </classpath>
+        </javac>
+        <javac  destdir="${app.path}/bin/"
+                optimize="off"
+        		source="1.5"
+                debug="on"
+                failonerror="true"
+                srcdir="${app.path}/core"
+			    encoding="GBK"
+	        	deprecation="false"
+	            memoryInitialSize="80m"
+	            memoryMaximumSize="${maxMem.size}"
+	            fork="yes"
+        >
+            <classpath>
+	            <fileset dir="${java.home}/lib/">
+                    <include name="*.jar"/>
+                </fileset>
+                <fileset dir="${app.lib}">
+                    <include name="*.jar"/>
+                </fileset>
+            </classpath>
+        </javac>
+    </target>
+
+	<target name="build-jar" depends="do-java-compile">
+
+        <echo>把编译后的类打成jar包</echo>
+		<jar jarfile="${app.target}/lib/${app.name}.jar" 
+			 basedir="${app.path}/bin">
+			<include name="**/*"/>
+		</jar>
+	</target>
+	
+	<target name="package" depends="build-jar" >
+		<zip destfile="${app.target}/${app.name}.zip">
+			<fileset dir="${app.target}/"></fileset>
+		</zip>
+	</target>
+</project>

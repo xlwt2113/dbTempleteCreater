@@ -1,0 +1,1104 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<root>
+  <bean type="com.ssj.jdbcfront.model.GenCodeModel">
+    <property name="basePackage">
+      <value type="java.lang.String">com.hhkj.alarm</value>
+    </property>
+    <property name="targetPath">
+      <value type="java.lang.String">E:\小工具\po</value>
+    </property>
+    <property name="url">
+      <value type="java.lang.String">alarmInfoCheck</value>
+    </property>
+    <property name="urlPre">
+      <value type="java.lang.String"></value>
+    </property>
+    <property name="basePackage">
+      <value type="java.lang.String">com.hhkj.alarm</value>
+    </property>
+    <property name="develpor">
+      <value type="java.lang.String">宋帅杰</value>
+    </property>
+    <property name="comment">
+      <value type="java.lang.String">报警信息闭环抽查表</value>
+    </property>
+    <property name="querySql">
+      <value type="java.lang.String">SELECT * FROM ALARM_INFO_CHECK t</value>
+    </property>
+    <property name="keyList">
+      <list>
+        <bean type="com.ssj.jdbcfront.model.GenCodeColumn">
+          <property name="name">
+            <value type="java.lang.String">VC_ID</value>
+          </property>
+          <property name="fieldName">
+            <value type="java.lang.String">vcId</value>
+          </property>
+          <property name="fieldType">
+            <value type="java.lang.String">java.lang.String</value>
+          </property>
+          <property name="type">
+            <value type="java.lang.String">VARCHAR2(50)</value>
+          </property>
+          <property name="typeLen">
+            <value type="java.lang.Long">50</value>
+          </property>
+          <property name="comment">
+            <value type="java.lang.String">VC_ID</value>
+          </property>
+          <property name="isNull">
+            <value type="java.lang.Boolean">false</value>
+          </property>
+          <property name="isPri">
+            <value type="java.lang.Boolean">true</value>
+          </property>
+          <property name="isHidden">
+            <value type="java.lang.Boolean">true</value>
+          </property>
+          <property name="queryCol">
+            <value type="java.lang.Boolean">false</value>
+          </property>
+          <property name="queryType">
+            <value type="java.lang.String"></value>
+          </property>
+          <property name="dictName">
+            <value type="java.lang.String"></value>
+          </property>
+          <property name="seq">
+            <value type="java.lang.String"></value>
+          </property>
+        </bean>
+      </list>
+    </property>
+    <property name="columnList">
+      <list>
+        <bean type="com.ssj.jdbcfront.model.GenCodeColumn">
+          <property name="name">
+            <value type="java.lang.String">DT_DATE</value>
+          </property>
+          <property name="fieldName">
+            <value type="java.lang.String">dtDate</value>
+          </property>
+          <property name="fieldType">
+            <value type="java.lang.String">java.util.Date</value>
+          </property>
+          <property name="type">
+            <value type="java.lang.String">DATE</value>
+          </property>
+          <property name="typeLen">
+            <value type="java.lang.Long">7</value>
+          </property>
+          <property name="comment">
+            <value type="java.lang.String">日期</value>
+          </property>
+          <property name="isNull">
+            <value type="java.lang.Boolean">false</value>
+          </property>
+          <property name="isPri">
+            <value type="java.lang.Boolean">false</value>
+          </property>
+          <property name="isHidden">
+            <value type="java.lang.Boolean">false</value>
+          </property>
+          <property name="queryCol">
+            <value type="java.lang.Boolean">true</value>
+          </property>
+          <property name="queryType">
+            <value type="java.lang.String"></value>
+          </property>
+          <property name="dictName">
+            <value type="java.lang.String"></value>
+          </property>
+          <property name="seq">
+            <value type="java.lang.String"></value>
+          </property>
+        </bean>
+        <bean type="com.ssj.jdbcfront.model.GenCodeColumn">
+          <property name="name">
+            <value type="java.lang.String">DT_END</value>
+          </property>
+          <property name="fieldName">
+            <value type="java.lang.String">dtEnd</value>
+          </property>
+          <property name="fieldType">
+            <value type="java.lang.String">java.util.Date</value>
+          </property>
+          <property name="type">
+            <value type="java.lang.String">DATE</value>
+          </property>
+          <property name="typeLen">
+            <value type="java.lang.Long">7</value>
+          </property>
+          <property name="comment">
+            <value type="java.lang.String">抽查人员</value>
+          </property>
+          <property name="isNull">
+            <value type="java.lang.Boolean">true</value>
+          </property>
+          <property name="isPri">
+            <value type="java.lang.Boolean">false</value>
+          </property>
+          <property name="isHidden">
+            <value type="java.lang.Boolean">false</value>
+          </property>
+          <property name="queryCol">
+            <value type="java.lang.Boolean">true</value>
+          </property>
+          <property name="queryType">
+            <value type="java.lang.String"></value>
+          </property>
+          <property name="dictName">
+            <value type="java.lang.String"></value>
+          </property>
+          <property name="seq">
+            <value type="java.lang.String"></value>
+          </property>
+        </bean>
+        <bean type="com.ssj.jdbcfront.model.GenCodeColumn">
+          <property name="name">
+            <value type="java.lang.String">N_TOTAL</value>
+          </property>
+          <property name="fieldName">
+            <value type="java.lang.String">ntotal</value>
+          </property>
+          <property name="fieldType">
+            <value type="java.lang.String">int</value>
+          </property>
+          <property name="type">
+            <value type="java.lang.String">NUMBER</value>
+          </property>
+          <property name="typeLen">
+            <value type="java.lang.Long">22</value>
+          </property>
+          <property name="comment">
+            <value type="java.lang.String">样本数量</value>
+          </property>
+          <property name="isNull">
+            <value type="java.lang.Boolean">true</value>
+          </property>
+          <property name="isPri">
+            <value type="java.lang.Boolean">false</value>
+          </property>
+          <property name="isHidden">
+            <value type="java.lang.Boolean">false</value>
+          </property>
+          <property name="queryCol">
+            <value type="java.lang.Boolean">false</value>
+          </property>
+          <property name="queryType">
+            <value type="java.lang.String"></value>
+          </property>
+          <property name="dictName">
+            <value type="java.lang.String"></value>
+          </property>
+          <property name="seq">
+            <value type="java.lang.String"></value>
+          </property>
+        </bean>
+        <bean type="com.ssj.jdbcfront.model.GenCodeColumn">
+          <property name="name">
+            <value type="java.lang.String">N_CHECK</value>
+          </property>
+          <property name="fieldName">
+            <value type="java.lang.String">ncheck</value>
+          </property>
+          <property name="fieldType">
+            <value type="java.lang.String">int</value>
+          </property>
+          <property name="type">
+            <value type="java.lang.String">NUMBER</value>
+          </property>
+          <property name="typeLen">
+            <value type="java.lang.Long">22</value>
+          </property>
+          <property name="comment">
+            <value type="java.lang.String">抽查总数</value>
+          </property>
+          <property name="isNull">
+            <value type="java.lang.Boolean">true</value>
+          </property>
+          <property name="isPri">
+            <value type="java.lang.Boolean">false</value>
+          </property>
+          <property name="isHidden">
+            <value type="java.lang.Boolean">false</value>
+          </property>
+          <property name="queryCol">
+            <value type="java.lang.Boolean">false</value>
+          </property>
+          <property name="queryType">
+            <value type="java.lang.String"></value>
+          </property>
+          <property name="dictName">
+            <value type="java.lang.String"></value>
+          </property>
+          <property name="seq">
+            <value type="java.lang.String"></value>
+          </property>
+        </bean>
+        <bean type="com.ssj.jdbcfront.model.GenCodeColumn">
+          <property name="name">
+            <value type="java.lang.String">N_OK</value>
+          </property>
+          <property name="fieldName">
+            <value type="java.lang.String">nok</value>
+          </property>
+          <property name="fieldType">
+            <value type="java.lang.String">int</value>
+          </property>
+          <property name="type">
+            <value type="java.lang.String">NUMBER</value>
+          </property>
+          <property name="typeLen">
+            <value type="java.lang.Long">22</value>
+          </property>
+          <property name="comment">
+            <value type="java.lang.String">合格率数</value>
+          </property>
+          <property name="isNull">
+            <value type="java.lang.Boolean">true</value>
+          </property>
+          <property name="isPri">
+            <value type="java.lang.Boolean">false</value>
+          </property>
+          <property name="isHidden">
+            <value type="java.lang.Boolean">false</value>
+          </property>
+          <property name="queryCol">
+            <value type="java.lang.Boolean">false</value>
+          </property>
+          <property name="queryType">
+            <value type="java.lang.String"></value>
+          </property>
+          <property name="dictName">
+            <value type="java.lang.String"></value>
+          </property>
+          <property name="seq">
+            <value type="java.lang.String"></value>
+          </property>
+        </bean>
+        <bean type="com.ssj.jdbcfront.model.GenCodeColumn">
+          <property name="name">
+            <value type="java.lang.String">N_TOTAL1</value>
+          </property>
+          <property name="fieldName">
+            <value type="java.lang.String">ntotal1</value>
+          </property>
+          <property name="fieldType">
+            <value type="java.lang.String">int</value>
+          </property>
+          <property name="type">
+            <value type="java.lang.String">NUMBER</value>
+          </property>
+          <property name="typeLen">
+            <value type="java.lang.Long">22</value>
+          </property>
+          <property name="comment">
+            <value type="java.lang.String">一级报警数量</value>
+          </property>
+          <property name="isNull">
+            <value type="java.lang.Boolean">true</value>
+          </property>
+          <property name="isPri">
+            <value type="java.lang.Boolean">false</value>
+          </property>
+          <property name="isHidden">
+            <value type="java.lang.Boolean">false</value>
+          </property>
+          <property name="queryCol">
+            <value type="java.lang.Boolean">false</value>
+          </property>
+          <property name="queryType">
+            <value type="java.lang.String"></value>
+          </property>
+          <property name="dictName">
+            <value type="java.lang.String"></value>
+          </property>
+          <property name="seq">
+            <value type="java.lang.String"></value>
+          </property>
+        </bean>
+        <bean type="com.ssj.jdbcfront.model.GenCodeColumn">
+          <property name="name">
+            <value type="java.lang.String">N_CHECK1</value>
+          </property>
+          <property name="fieldName">
+            <value type="java.lang.String">ncheck1</value>
+          </property>
+          <property name="fieldType">
+            <value type="java.lang.String">int</value>
+          </property>
+          <property name="type">
+            <value type="java.lang.String">NUMBER</value>
+          </property>
+          <property name="typeLen">
+            <value type="java.lang.Long">22</value>
+          </property>
+          <property name="comment">
+            <value type="java.lang.String">一级报警抽查</value>
+          </property>
+          <property name="isNull">
+            <value type="java.lang.Boolean">true</value>
+          </property>
+          <property name="isPri">
+            <value type="java.lang.Boolean">false</value>
+          </property>
+          <property name="isHidden">
+            <value type="java.lang.Boolean">false</value>
+          </property>
+          <property name="queryCol">
+            <value type="java.lang.Boolean">false</value>
+          </property>
+          <property name="queryType">
+            <value type="java.lang.String"></value>
+          </property>
+          <property name="dictName">
+            <value type="java.lang.String"></value>
+          </property>
+          <property name="seq">
+            <value type="java.lang.String"></value>
+          </property>
+        </bean>
+        <bean type="com.ssj.jdbcfront.model.GenCodeColumn">
+          <property name="name">
+            <value type="java.lang.String">N_OK1</value>
+          </property>
+          <property name="fieldName">
+            <value type="java.lang.String">nok1</value>
+          </property>
+          <property name="fieldType">
+            <value type="java.lang.String">int</value>
+          </property>
+          <property name="type">
+            <value type="java.lang.String">NUMBER</value>
+          </property>
+          <property name="typeLen">
+            <value type="java.lang.Long">22</value>
+          </property>
+          <property name="comment">
+            <value type="java.lang.String">一级报警合格数</value>
+          </property>
+          <property name="isNull">
+            <value type="java.lang.Boolean">true</value>
+          </property>
+          <property name="isPri">
+            <value type="java.lang.Boolean">false</value>
+          </property>
+          <property name="isHidden">
+            <value type="java.lang.Boolean">false</value>
+          </property>
+          <property name="queryCol">
+            <value type="java.lang.Boolean">false</value>
+          </property>
+          <property name="queryType">
+            <value type="java.lang.String"></value>
+          </property>
+          <property name="dictName">
+            <value type="java.lang.String"></value>
+          </property>
+          <property name="seq">
+            <value type="java.lang.String"></value>
+          </property>
+        </bean>
+        <bean type="com.ssj.jdbcfront.model.GenCodeColumn">
+          <property name="name">
+            <value type="java.lang.String">N_TOTAL2</value>
+          </property>
+          <property name="fieldName">
+            <value type="java.lang.String">ntotal2</value>
+          </property>
+          <property name="fieldType">
+            <value type="java.lang.String">int</value>
+          </property>
+          <property name="type">
+            <value type="java.lang.String">NUMBER</value>
+          </property>
+          <property name="typeLen">
+            <value type="java.lang.Long">22</value>
+          </property>
+          <property name="comment">
+            <value type="java.lang.String">二级报警数量</value>
+          </property>
+          <property name="isNull">
+            <value type="java.lang.Boolean">true</value>
+          </property>
+          <property name="isPri">
+            <value type="java.lang.Boolean">false</value>
+          </property>
+          <property name="isHidden">
+            <value type="java.lang.Boolean">false</value>
+          </property>
+          <property name="queryCol">
+            <value type="java.lang.Boolean">false</value>
+          </property>
+          <property name="queryType">
+            <value type="java.lang.String"></value>
+          </property>
+          <property name="dictName">
+            <value type="java.lang.String"></value>
+          </property>
+          <property name="seq">
+            <value type="java.lang.String"></value>
+          </property>
+        </bean>
+        <bean type="com.ssj.jdbcfront.model.GenCodeColumn">
+          <property name="name">
+            <value type="java.lang.String">N_CHECK2</value>
+          </property>
+          <property name="fieldName">
+            <value type="java.lang.String">ncheck2</value>
+          </property>
+          <property name="fieldType">
+            <value type="java.lang.String">int</value>
+          </property>
+          <property name="type">
+            <value type="java.lang.String">NUMBER</value>
+          </property>
+          <property name="typeLen">
+            <value type="java.lang.Long">22</value>
+          </property>
+          <property name="comment">
+            <value type="java.lang.String">二级报警抽查</value>
+          </property>
+          <property name="isNull">
+            <value type="java.lang.Boolean">true</value>
+          </property>
+          <property name="isPri">
+            <value type="java.lang.Boolean">false</value>
+          </property>
+          <property name="isHidden">
+            <value type="java.lang.Boolean">false</value>
+          </property>
+          <property name="queryCol">
+            <value type="java.lang.Boolean">false</value>
+          </property>
+          <property name="queryType">
+            <value type="java.lang.String"></value>
+          </property>
+          <property name="dictName">
+            <value type="java.lang.String"></value>
+          </property>
+          <property name="seq">
+            <value type="java.lang.String"></value>
+          </property>
+        </bean>
+        <bean type="com.ssj.jdbcfront.model.GenCodeColumn">
+          <property name="name">
+            <value type="java.lang.String">N_OK2</value>
+          </property>
+          <property name="fieldName">
+            <value type="java.lang.String">nok2</value>
+          </property>
+          <property name="fieldType">
+            <value type="java.lang.String">int</value>
+          </property>
+          <property name="type">
+            <value type="java.lang.String">NUMBER</value>
+          </property>
+          <property name="typeLen">
+            <value type="java.lang.Long">22</value>
+          </property>
+          <property name="comment">
+            <value type="java.lang.String">二级报警合格数</value>
+          </property>
+          <property name="isNull">
+            <value type="java.lang.Boolean">true</value>
+          </property>
+          <property name="isPri">
+            <value type="java.lang.Boolean">false</value>
+          </property>
+          <property name="isHidden">
+            <value type="java.lang.Boolean">false</value>
+          </property>
+          <property name="queryCol">
+            <value type="java.lang.Boolean">false</value>
+          </property>
+          <property name="queryType">
+            <value type="java.lang.String"></value>
+          </property>
+          <property name="dictName">
+            <value type="java.lang.String"></value>
+          </property>
+          <property name="seq">
+            <value type="java.lang.String"></value>
+          </property>
+        </bean>
+        <bean type="com.ssj.jdbcfront.model.GenCodeColumn">
+          <property name="name">
+            <value type="java.lang.String">N_TOTAL3</value>
+          </property>
+          <property name="fieldName">
+            <value type="java.lang.String">ntotal3</value>
+          </property>
+          <property name="fieldType">
+            <value type="java.lang.String">int</value>
+          </property>
+          <property name="type">
+            <value type="java.lang.String">NUMBER</value>
+          </property>
+          <property name="typeLen">
+            <value type="java.lang.Long">22</value>
+          </property>
+          <property name="comment">
+            <value type="java.lang.String">三级报警数量2</value>
+          </property>
+          <property name="isNull">
+            <value type="java.lang.Boolean">true</value>
+          </property>
+          <property name="isPri">
+            <value type="java.lang.Boolean">false</value>
+          </property>
+          <property name="isHidden">
+            <value type="java.lang.Boolean">false</value>
+          </property>
+          <property name="queryCol">
+            <value type="java.lang.Boolean">false</value>
+          </property>
+          <property name="queryType">
+            <value type="java.lang.String"></value>
+          </property>
+          <property name="dictName">
+            <value type="java.lang.String"></value>
+          </property>
+          <property name="seq">
+            <value type="java.lang.String"></value>
+          </property>
+        </bean>
+        <bean type="com.ssj.jdbcfront.model.GenCodeColumn">
+          <property name="name">
+            <value type="java.lang.String">N_OK3</value>
+          </property>
+          <property name="fieldName">
+            <value type="java.lang.String">nok3</value>
+          </property>
+          <property name="fieldType">
+            <value type="java.lang.String">int</value>
+          </property>
+          <property name="type">
+            <value type="java.lang.String">NUMBER</value>
+          </property>
+          <property name="typeLen">
+            <value type="java.lang.Long">22</value>
+          </property>
+          <property name="comment">
+            <value type="java.lang.String">三级报警抽查2</value>
+          </property>
+          <property name="isNull">
+            <value type="java.lang.Boolean">true</value>
+          </property>
+          <property name="isPri">
+            <value type="java.lang.Boolean">false</value>
+          </property>
+          <property name="isHidden">
+            <value type="java.lang.Boolean">false</value>
+          </property>
+          <property name="queryCol">
+            <value type="java.lang.Boolean">false</value>
+          </property>
+          <property name="queryType">
+            <value type="java.lang.String"></value>
+          </property>
+          <property name="dictName">
+            <value type="java.lang.String"></value>
+          </property>
+          <property name="seq">
+            <value type="java.lang.String"></value>
+          </property>
+        </bean>
+        <bean type="com.ssj.jdbcfront.model.GenCodeColumn">
+          <property name="name">
+            <value type="java.lang.String">N_RATE3</value>
+          </property>
+          <property name="fieldName">
+            <value type="java.lang.String">nrate3</value>
+          </property>
+          <property name="fieldType">
+            <value type="java.lang.String">int</value>
+          </property>
+          <property name="type">
+            <value type="java.lang.String">NUMBER</value>
+          </property>
+          <property name="typeLen">
+            <value type="java.lang.Long">22</value>
+          </property>
+          <property name="comment">
+            <value type="java.lang.String">三级报警合格数</value>
+          </property>
+          <property name="isNull">
+            <value type="java.lang.Boolean">true</value>
+          </property>
+          <property name="isPri">
+            <value type="java.lang.Boolean">false</value>
+          </property>
+          <property name="isHidden">
+            <value type="java.lang.Boolean">false</value>
+          </property>
+          <property name="queryCol">
+            <value type="java.lang.Boolean">false</value>
+          </property>
+          <property name="queryType">
+            <value type="java.lang.String"></value>
+          </property>
+          <property name="dictName">
+            <value type="java.lang.String"></value>
+          </property>
+          <property name="seq">
+            <value type="java.lang.String"></value>
+          </property>
+        </bean>
+        <bean type="com.ssj.jdbcfront.model.GenCodeColumn">
+          <property name="name">
+            <value type="java.lang.String">N_TOTAL10</value>
+          </property>
+          <property name="fieldName">
+            <value type="java.lang.String">ntotal10</value>
+          </property>
+          <property name="fieldType">
+            <value type="java.lang.String">int</value>
+          </property>
+          <property name="type">
+            <value type="java.lang.String">NUMBER</value>
+          </property>
+          <property name="typeLen">
+            <value type="java.lang.Long">22</value>
+          </property>
+          <property name="comment">
+            <value type="java.lang.String">预警数量3</value>
+          </property>
+          <property name="isNull">
+            <value type="java.lang.Boolean">true</value>
+          </property>
+          <property name="isPri">
+            <value type="java.lang.Boolean">false</value>
+          </property>
+          <property name="isHidden">
+            <value type="java.lang.Boolean">false</value>
+          </property>
+          <property name="queryCol">
+            <value type="java.lang.Boolean">false</value>
+          </property>
+          <property name="queryType">
+            <value type="java.lang.String"></value>
+          </property>
+          <property name="dictName">
+            <value type="java.lang.String"></value>
+          </property>
+          <property name="seq">
+            <value type="java.lang.String"></value>
+          </property>
+        </bean>
+        <bean type="com.ssj.jdbcfront.model.GenCodeColumn">
+          <property name="name">
+            <value type="java.lang.String">N_CHECK10</value>
+          </property>
+          <property name="fieldName">
+            <value type="java.lang.String">ncheck10</value>
+          </property>
+          <property name="fieldType">
+            <value type="java.lang.String">int</value>
+          </property>
+          <property name="type">
+            <value type="java.lang.String">NUMBER</value>
+          </property>
+          <property name="typeLen">
+            <value type="java.lang.Long">22</value>
+          </property>
+          <property name="comment">
+            <value type="java.lang.String">预警抽查3</value>
+          </property>
+          <property name="isNull">
+            <value type="java.lang.Boolean">true</value>
+          </property>
+          <property name="isPri">
+            <value type="java.lang.Boolean">false</value>
+          </property>
+          <property name="isHidden">
+            <value type="java.lang.Boolean">false</value>
+          </property>
+          <property name="queryCol">
+            <value type="java.lang.Boolean">false</value>
+          </property>
+          <property name="queryType">
+            <value type="java.lang.String"></value>
+          </property>
+          <property name="dictName">
+            <value type="java.lang.String"></value>
+          </property>
+          <property name="seq">
+            <value type="java.lang.String"></value>
+          </property>
+        </bean>
+        <bean type="com.ssj.jdbcfront.model.GenCodeColumn">
+          <property name="name">
+            <value type="java.lang.String">N_OK10</value>
+          </property>
+          <property name="fieldName">
+            <value type="java.lang.String">nok10</value>
+          </property>
+          <property name="fieldType">
+            <value type="java.lang.String">int</value>
+          </property>
+          <property name="type">
+            <value type="java.lang.String">NUMBER</value>
+          </property>
+          <property name="typeLen">
+            <value type="java.lang.Long">22</value>
+          </property>
+          <property name="comment">
+            <value type="java.lang.String">预警合格数</value>
+          </property>
+          <property name="isNull">
+            <value type="java.lang.Boolean">true</value>
+          </property>
+          <property name="isPri">
+            <value type="java.lang.Boolean">false</value>
+          </property>
+          <property name="isHidden">
+            <value type="java.lang.Boolean">false</value>
+          </property>
+          <property name="queryCol">
+            <value type="java.lang.Boolean">false</value>
+          </property>
+          <property name="queryType">
+            <value type="java.lang.String"></value>
+          </property>
+          <property name="dictName">
+            <value type="java.lang.String"></value>
+          </property>
+          <property name="seq">
+            <value type="java.lang.String"></value>
+          </property>
+        </bean>
+        <bean type="com.ssj.jdbcfront.model.GenCodeColumn">
+          <property name="name">
+            <value type="java.lang.String">VC_DEL$FLAG</value>
+          </property>
+          <property name="fieldName">
+            <value type="java.lang.String">vcDelFlag</value>
+          </property>
+          <property name="fieldType">
+            <value type="java.lang.String">int</value>
+          </property>
+          <property name="type">
+            <value type="java.lang.String">NUMBER</value>
+          </property>
+          <property name="typeLen">
+            <value type="java.lang.Long">22</value>
+          </property>
+          <property name="comment">
+            <value type="java.lang.String">删除标记</value>
+          </property>
+          <property name="isNull">
+            <value type="java.lang.Boolean">true</value>
+          </property>
+          <property name="isPri">
+            <value type="java.lang.Boolean">false</value>
+          </property>
+          <property name="isHidden">
+            <value type="java.lang.Boolean">true</value>
+          </property>
+          <property name="queryCol">
+            <value type="java.lang.Boolean">false</value>
+          </property>
+          <property name="queryType">
+            <value type="java.lang.String"></value>
+          </property>
+          <property name="dictName">
+            <value type="java.lang.String"></value>
+          </property>
+          <property name="seq">
+            <value type="java.lang.String"></value>
+          </property>
+        </bean>
+        <bean type="com.ssj.jdbcfront.model.GenCodeColumn">
+          <property name="name">
+            <value type="java.lang.String">VC_DID</value>
+          </property>
+          <property name="fieldName">
+            <value type="java.lang.String">vcDid</value>
+          </property>
+          <property name="fieldType">
+            <value type="java.lang.String">java.lang.String</value>
+          </property>
+          <property name="type">
+            <value type="java.lang.String">VARCHAR2(50)</value>
+          </property>
+          <property name="typeLen">
+            <value type="java.lang.Long">50</value>
+          </property>
+          <property name="comment">
+            <value type="java.lang.String">段ID</value>
+          </property>
+          <property name="isNull">
+            <value type="java.lang.Boolean">true</value>
+          </property>
+          <property name="isPri">
+            <value type="java.lang.Boolean">false</value>
+          </property>
+          <property name="isHidden">
+            <value type="java.lang.Boolean">false</value>
+          </property>
+          <property name="queryCol">
+            <value type="java.lang.Boolean">true</value>
+          </property>
+          <property name="queryType">
+            <value type="java.lang.String"></value>
+          </property>
+          <property name="dictName">
+            <value type="java.lang.String"></value>
+          </property>
+          <property name="seq">
+            <value type="java.lang.String"></value>
+          </property>
+        </bean>
+        <bean type="com.ssj.jdbcfront.model.GenCodeColumn">
+          <property name="name">
+            <value type="java.lang.String">VC_DNAME</value>
+          </property>
+          <property name="fieldName">
+            <value type="java.lang.String">vcDname</value>
+          </property>
+          <property name="fieldType">
+            <value type="java.lang.String">java.lang.String</value>
+          </property>
+          <property name="type">
+            <value type="java.lang.String">VARCHAR2(50)</value>
+          </property>
+          <property name="typeLen">
+            <value type="java.lang.Long">50</value>
+          </property>
+          <property name="comment">
+            <value type="java.lang.String">段名</value>
+          </property>
+          <property name="isNull">
+            <value type="java.lang.Boolean">true</value>
+          </property>
+          <property name="isPri">
+            <value type="java.lang.Boolean">false</value>
+          </property>
+          <property name="isHidden">
+            <value type="java.lang.Boolean">false</value>
+          </property>
+          <property name="queryCol">
+            <value type="java.lang.Boolean">false</value>
+          </property>
+          <property name="queryType">
+            <value type="java.lang.String"></value>
+          </property>
+          <property name="dictName">
+            <value type="java.lang.String"></value>
+          </property>
+          <property name="seq">
+            <value type="java.lang.String"></value>
+          </property>
+        </bean>
+        <bean type="com.ssj.jdbcfront.model.GenCodeColumn">
+          <property name="name">
+            <value type="java.lang.String">DT_ADD</value>
+          </property>
+          <property name="fieldName">
+            <value type="java.lang.String">dtAdd</value>
+          </property>
+          <property name="fieldType">
+            <value type="java.lang.String">java.util.Date</value>
+          </property>
+          <property name="type">
+            <value type="java.lang.String">DATE</value>
+          </property>
+          <property name="typeLen">
+            <value type="java.lang.Long">7</value>
+          </property>
+          <property name="comment">
+            <value type="java.lang.String">录入时间</value>
+          </property>
+          <property name="isNull">
+            <value type="java.lang.Boolean">true</value>
+          </property>
+          <property name="isPri">
+            <value type="java.lang.Boolean">false</value>
+          </property>
+          <property name="isHidden">
+            <value type="java.lang.Boolean">true</value>
+          </property>
+          <property name="queryCol">
+            <value type="java.lang.Boolean">false</value>
+          </property>
+          <property name="queryType">
+            <value type="java.lang.String"></value>
+          </property>
+          <property name="dictName">
+            <value type="java.lang.String"></value>
+          </property>
+          <property name="seq">
+            <value type="java.lang.String"></value>
+          </property>
+        </bean>
+        <bean type="com.ssj.jdbcfront.model.GenCodeColumn">
+          <property name="name">
+            <value type="java.lang.String">VC_ADD</value>
+          </property>
+          <property name="fieldName">
+            <value type="java.lang.String">vcAdd</value>
+          </property>
+          <property name="fieldType">
+            <value type="java.lang.String">java.lang.String</value>
+          </property>
+          <property name="type">
+            <value type="java.lang.String">VARCHAR2(50)</value>
+          </property>
+          <property name="typeLen">
+            <value type="java.lang.Long">50</value>
+          </property>
+          <property name="comment">
+            <value type="java.lang.String">录入人</value>
+          </property>
+          <property name="isNull">
+            <value type="java.lang.Boolean">true</value>
+          </property>
+          <property name="isPri">
+            <value type="java.lang.Boolean">false</value>
+          </property>
+          <property name="isHidden">
+            <value type="java.lang.Boolean">true</value>
+          </property>
+          <property name="queryCol">
+            <value type="java.lang.Boolean">false</value>
+          </property>
+          <property name="queryType">
+            <value type="java.lang.String"></value>
+          </property>
+          <property name="dictName">
+            <value type="java.lang.String"></value>
+          </property>
+          <property name="seq">
+            <value type="java.lang.String"></value>
+          </property>
+        </bean>
+        <bean type="com.ssj.jdbcfront.model.GenCodeColumn">
+          <property name="name">
+            <value type="java.lang.String">DT_MODIFY</value>
+          </property>
+          <property name="fieldName">
+            <value type="java.lang.String">dtModify</value>
+          </property>
+          <property name="fieldType">
+            <value type="java.lang.String">java.util.Date</value>
+          </property>
+          <property name="type">
+            <value type="java.lang.String">DATE</value>
+          </property>
+          <property name="typeLen">
+            <value type="java.lang.Long">7</value>
+          </property>
+          <property name="comment">
+            <value type="java.lang.String">修改时间</value>
+          </property>
+          <property name="isNull">
+            <value type="java.lang.Boolean">true</value>
+          </property>
+          <property name="isPri">
+            <value type="java.lang.Boolean">false</value>
+          </property>
+          <property name="isHidden">
+            <value type="java.lang.Boolean">true</value>
+          </property>
+          <property name="queryCol">
+            <value type="java.lang.Boolean">false</value>
+          </property>
+          <property name="queryType">
+            <value type="java.lang.String"></value>
+          </property>
+          <property name="dictName">
+            <value type="java.lang.String"></value>
+          </property>
+          <property name="seq">
+            <value type="java.lang.String"></value>
+          </property>
+        </bean>
+        <bean type="com.ssj.jdbcfront.model.GenCodeColumn">
+          <property name="name">
+            <value type="java.lang.String">VC_MODIFY</value>
+          </property>
+          <property name="fieldName">
+            <value type="java.lang.String">vcModify</value>
+          </property>
+          <property name="fieldType">
+            <value type="java.lang.String">java.lang.String</value>
+          </property>
+          <property name="type">
+            <value type="java.lang.String">VARCHAR2(50)</value>
+          </property>
+          <property name="typeLen">
+            <value type="java.lang.Long">50</value>
+          </property>
+          <property name="comment">
+            <value type="java.lang.String">修改人</value>
+          </property>
+          <property name="isNull">
+            <value type="java.lang.Boolean">true</value>
+          </property>
+          <property name="isPri">
+            <value type="java.lang.Boolean">false</value>
+          </property>
+          <property name="isHidden">
+            <value type="java.lang.Boolean">true</value>
+          </property>
+          <property name="queryCol">
+            <value type="java.lang.Boolean">false</value>
+          </property>
+          <property name="queryType">
+            <value type="java.lang.String"></value>
+          </property>
+          <property name="dictName">
+            <value type="java.lang.String"></value>
+          </property>
+          <property name="seq">
+            <value type="java.lang.String"></value>
+          </property>
+        </bean>
+        <bean type="com.ssj.jdbcfront.model.GenCodeColumn">
+          <property name="name">
+            <value type="java.lang.String">N_SYN</value>
+          </property>
+          <property name="fieldName">
+            <value type="java.lang.String">nsyn</value>
+          </property>
+          <property name="fieldType">
+            <value type="java.lang.String">int</value>
+          </property>
+          <property name="type">
+            <value type="java.lang.String">NUMBER</value>
+          </property>
+          <property name="typeLen">
+            <value type="java.lang.Long">22</value>
+          </property>
+          <property name="comment">
+            <value type="java.lang.String">同步标记</value>
+          </property>
+          <property name="isNull">
+            <value type="java.lang.Boolean">true</value>
+          </property>
+          <property name="isPri">
+            <value type="java.lang.Boolean">false</value>
+          </property>
+          <property name="isHidden">
+            <value type="java.lang.Boolean">false</value>
+          </property>
+          <property name="queryCol">
+            <value type="java.lang.Boolean">false</value>
+          </property>
+          <property name="queryType">
+            <value type="java.lang.String"></value>
+          </property>
+          <property name="dictName">
+            <value type="java.lang.String"></value>
+          </property>
+          <property name="seq">
+            <value type="java.lang.String"></value>
+          </property>
+        </bean>
+      </list>
+    </property>
+  </bean>
+</root>

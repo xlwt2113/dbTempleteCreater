@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<config> 
+  <TNSs> 
+    <TNS name="mysql" ip="127.0.0.1" port="3306" driver="mysql-connector-java-5.0.6-bin.jar" sid="depot" dbtype="mysql" username="root" password="root" jdbcUrl="jdbc:mysql://127.0.0.1:3306/depot?useServerPrepStmts=false&amp;useUnicode=true&amp;characterEncoding=GBK&amp;autoReconnect=true"/>  
+    <TNS name="183" ip="192.168.0.183" port="3306" driver="E:\workspace\csmis\webroot\WEB-INF\lib\mysql-connector-java-5.0.5.jar" sid="hnfxj" dbtype="mysql" username="root" password="root"/>  
+    <TNS name="208" ip="125.46.36.208" port="3306" driver="E:\workspace\csmis\webroot\WEB-INF\lib\mysql-connector-java-5.0.5.jar" sid="hnfxj" dbtype="mysql" username="root" password="hnfxjwebuser"/>  
+    <TNS name="174" ip="172.16.18.174" port="1521" driver="D:\oracle\product\10.2.0\db_1\jdbc\lib\ojdbc14.jar" sid="csmisdb" dbtype="oracle[8i,9i,10g]" username="csmisztx" password="csmis"/>  
+    <TNS name="¹ãÌú¶ÌÐÅÍø¹Ø" ip="61.235.74.131" port="3406" driver="E:\workspaces\csmis1\csmis\webroot\WEB-INF\lib\mysql-connector-java-5.0.5.jar" sid="massi" dbtype="mysql" username="root" password="royasoft"/> 
+  </TNSs>  
+  <trans> 
+    <tran type="VARCHAR">java.lang.String</tran>  
+    <tran type="VARCHAR2">java.lang.String</tran>  
+    <tran type="INT">int</tran>  
+    <tran type="NUMBER">int</tran>  
+    <tran type="LONG">long</tran>  
+    <tran type="FLOAT">float</tran>  
+    <tran type="DOUBLE">double</tran>  
+    <tran type="CLOB">java.lang.String</tran>  
+    <tran type="DATE">java.util.Date</tran>  
+    <tran type="TIME">java.util.Date</tran> 
+  </trans> 
+</config>
