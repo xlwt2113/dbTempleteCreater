@@ -1,15 +1,5 @@
 <%= form_for(@${model.slName},:html => {:class=>"form-horizontal"}) do |f| %>
-    <% if @${model.slName}.errors.any? %>
-        <div id="error_explanation">
-          <h2>保存数据时产生 <%=@${model.slName}.errors.count%>个错误,请检查:</h2>
-          <ul>
-            <% @${model.slName}.errors.messages.each do |message| %>
-                <li><%= message[1][0] %></li>
-            <% end %>
-          </ul>
-        </div>
-    <% end %>
-
+<%=error_messages_for(@${model.slName})%>
 
 
 #foreach($key in $model.allColumn) #if($key.fieldName!='vcId'&&$key.fieldName!='id')

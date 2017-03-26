@@ -29,7 +29,7 @@
   <thead>
     <tr>
 #foreach($key in $model.columnList)
-       <td> #if(${key.comment}&&${key.comment}!='')${key.comment}#end</td>
+       <th>#if(${key.comment}&&${key.comment}!='')${key.comment}#end</th>
 #end
       <th colspan="3"><%= link_to '新增', new_${model.tableDsName}_path %></th>
     </tr>

@@ -97,6 +97,6 @@ class ${model.objNames}Controller < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def ${model.slName}_params
-      params.require(:${model.tableDsName}).permit(#foreach($key in $model.columnList):$key.name#if($foreach.hasNext), #end#end)
+      params.require(:${model.tableDsName}).permit!
     end
 end
